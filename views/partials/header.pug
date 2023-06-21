@@ -1,0 +1,21 @@
+extends ./head
+block head
+    .all-wrapper
+        .header
+            .navbar-wrapper
+                a.navbar-title-wrapper(href='/')
+                    .title-text= __('Title')
+                .navbar-items-wrapper
+                    a.each-navbar-item(href='/page')= __('page')
+                    a.each-navbar-item(href='/page')= __('page')
+                    a.each-navbar-item(href='/page')= __('page')
+                    a.each-navbar-item(href='/page')= __('page')
+                    a.each-navbar-item(href='/paeg')= __('page')
+                    a.translation-wrapper
+                        .translation-button#lang1 Lang1 
+                        .translation-button#lang2 Lang2
+                    .responsive-sidebar-icon#sidebar-button
+                        .responsive-sidebar-icon-bar
+                        .responsive-sidebar-icon-bar
+                        .responsive-sidebar-icon-bar
+        block content

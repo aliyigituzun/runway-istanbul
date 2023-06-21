@@ -1,0 +1,18 @@
+extends ../partials/header
+block content
+    .all-content-wrapper
+        .info-wrapper
+            .title-wrapper= __('Our Mission')
+            .each-paragraph-wrapper= __('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum')
+            .each-paragraph-wrapper= __('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum')
+        .footer-wrapper
+            .footer-text-wrapper Title 
+            .footer-text-wrapper= __('Privacy Policy')
+    .responsive-sidebar-wrapper#sidebar
+        a.sidebar-title-text-wrapper(href='/')
+            .title-text Title
+        .sidebar
+            a.each-sidebar-item(href='/page')= __('Page')
+            a.translation-wrapper
+                .translation-button#lang1 Lang1 
+                .translation-button#lang2 Lang2             
