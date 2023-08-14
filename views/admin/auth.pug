@@ -1,0 +1,20 @@
+extends ../partials/header
+block content
+    .all-content-wrapper
+        .auth-wrapper
+            form.login-wrapper 
+                .login-wrapper-title Admin Login
+                .each-auth-input-wrapper
+                    .auth-input-label-wrapper
+                        .auth-input-label= __('Password')
+                    input.auth-input(type='password', name='password')#password
+                .login-button-wrapper
+                    .login-button#login Login
+    .responsive-sidebar-wrapper#sidebar
+        a.sidebar-title-text-wrapper(href='/')
+            .title-text Title
+        .sidebar
+            a.each-sidebar-item(href='/page')= __('Page')
+            a.translation-wrapper
+                .translation-button#lang1 Lang1 
+                .translation-button#lang2 Lang2
