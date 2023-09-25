@@ -1,3 +1,5 @@
+Article = require('../../../models/article/Article');
+
 module.exports =  (req, res) => {
     res.render('admin/index', {
         title: 'Admin',

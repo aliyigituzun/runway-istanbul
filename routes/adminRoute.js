@@ -4,21 +4,30 @@ const isAdmin = require('../middleware/isAdmin');
 
 const adminAuthGetController = require('../controllers/admin/auth/get');
 const adminIndexGetController = require('../controllers/admin/index/get');
+const adminArticleGetController = require('../controllers/admin/article/get');
 
 const adminAuthPostController = require('../controllers/admin/auth/post');
+const adminArticlePostController = require('../controllers/admin/article/post');
 
-
+router.get('/',
+    //isAdmin,
+    adminIndexGetController
+);
 router.get('/auth', 
     adminAuthGetController
 );
-router.get('',
-    isAdmin, 
-    adminIndexGetController
+router.get('/article',
+    //isAdmin,
+    adminArticleGetController
 );
 
 router.post('/auth',
     adminAuthPostController
 );
+router.post('/article',
+    adminArticlePostController
+);
+
 
 
 

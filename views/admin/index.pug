@@ -1,0 +1,14 @@
+extends ../partials/adminheader
+block content
+    .all-content-wrapper
+        .dashboard-main-wrapper
+            .article-list-wrapper
+                
+    .responsive-sidebar-wrapper#sidebar
+        a.sidebar-title-text-wrapper(href='/')
+            .title-text Title
+        .sidebar
+            a.each-sidebar-item(href='/page')= __('Page')
+            a.translation-wrapper
+                .translation-button#tr Tr 
+                .translation-button#en En

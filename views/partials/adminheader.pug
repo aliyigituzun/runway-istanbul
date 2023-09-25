@@ -1,0 +1,9 @@
+extends ./head
+block head
+    .all-wrapper
+        .dashboard-sidebar-wrapper
+            .dashboard-title-wrapper Runway Istanbul 
+            .dashboard-menu-wrapper Menu
+            a.each-dashboard-button#main(href='/admin') General
+            a.each-dashboard-button#create(href='/admin/article') Articles
+        block content

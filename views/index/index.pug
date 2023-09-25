@@ -1,13 +1,58 @@
 extends ../partials/header
 block content
     .all-content-wrapper
-        .info-wrapper
-            .title-wrapper= __('Our Mission')
-            .each-paragraph-wrapper= __('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum')
-            .each-paragraph-wrapper= __('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum')
+        .featured-wrapper
+            .main-featured-image-wrapper
+                img.main-featured-image(src='/res/img1.jpeg' width='100%' height='100%')
+            .main-featured-text-wrapper
+                .main-featured-title-wrapper
+                    .main-featured-title-text Zenci poyraz
+                .main-featured-description-wrapper
+                    .main-featured-description-text "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+        .news-wrapper
+            .each-article-wrapper 
+                .each-article-image-wrapper 
+                    img.each-article-image(src='/res/img1.jpeg' width='100%' height='100%')
+                .each-article-text-wrapper 
+                    .each-article-title-wrapper TİTEL
+                    .each-article-description-wrapper Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    .each-article-author-wrapper Author
+            .each-article-wrapper 
+                .each-article-image-wrapper 
+                .each-article-text-wrapper 
+                    .each-article-title-wrapper 
+                    .each-article-description-wrapper
+                    .each-article-author-wrapper
+            .each-article-wrapper 
+                .each-article-image-wrapper 
+                .each-article-text-wrapper 
+                    .each-article-title-wrapper 
+                    .each-article-description-wrapper
+                    .each-article-author-wrapper
+            .each-article-wrapper 
+                .each-article-image-wrapper 
+                .each-article-text-wrapper 
+                    .each-article-title-wrapper 
+                    .each-article-description-wrapper
+                    .each-article-author-wrapper
+            .each-article-wrapper 
+                .each-article-image-wrapper 
+                .each-article-text-wrapper 
+                    .each-article-title-wrapper 
+                    .each-article-description-wrapper
+                    .each-article-author-wrapper
+            .each-article-wrapper 
+                .each-article-image-wrapper 
+                .each-article-text-wrapper 
+                    .each-article-title-wrapper Title Nigga
+                    .each-article-description-wrapper
+                    .each-article-author-wrapper
         .footer-wrapper
-            .footer-text-wrapper Title 
-            .footer-text-wrapper= __('Privacy Policy')
+            .footer-title-wrapper Runway Istanbul 
+            .footer-text-wrapper
+                .each-footer-wrapper= __('Privacy Policy')
+                .each-footer-wrapper 2023
+                .each-footer-wrapper instagram_logo
     .responsive-sidebar-wrapper#sidebar
         a.sidebar-title-text-wrapper(href='/')
             .title-text Title

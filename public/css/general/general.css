@@ -2,11 +2,14 @@ body {
     margin: 0px;
     }
 html {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
 }
 .all-content-wrapper {
     box-sizing: border-box;
     moz-box-sizing: border-box;
     webkit-box-sizing: border-box;
     padding-top: 90px;
+    height: auto;
 }

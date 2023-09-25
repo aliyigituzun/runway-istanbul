@@ -1,3 +1,5 @@
+const Article = require('../../../models/article/Article');
+
 module.exports = (req, res) => {
 
     res.render('index/index', {

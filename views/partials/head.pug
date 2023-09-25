@@ -11,6 +11,9 @@ html(lang="en")
       title #{title} | Title
     else 
       title Title
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap", rel="stylesheet")
     if includes && includes.external
       if includes.external.css
         each file_name in includes.external.css

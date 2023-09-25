@@ -2,20 +2,24 @@ extends ./head
 block head
     .all-wrapper
         .header
-            .navbar-wrapper
-                a.navbar-title-wrapper(href='/')
-                    .title-text= __('Title')
-                .navbar-items-wrapper
-                    a.each-navbar-item(href='/page')= __('page')
-                    a.each-navbar-item(href='/page')= __('page')
-                    a.each-navbar-item(href='/page')= __('page')
-                    a.each-navbar-item(href='/page')= __('page')
-                    a.each-navbar-item(href='/paeg')= __('page')
-                    a.translation-wrapper
-                        .translation-button#lang1 Lang1 
-                        .translation-button#lang2 Lang2
+            .upper-header
+                .navbar-wrapper
+                    a.navbar-title-wrapper(href='/')
+                        .title-text Runway Istanbul
+                a.translation-wrapper
+                    .translation-button#en En 
+                    .translation-button#tr Tr
                     .responsive-sidebar-icon#sidebar-button
                         .responsive-sidebar-icon-bar
                         .responsive-sidebar-icon-bar
                         .responsive-sidebar-icon-bar
+            .lower-header
+                .navbar-items-wrapper
+                        a.each-navbar-item(href='/fashion')= __('Fashion')
+                        a.each-navbar-item(href='/page')= __('Runway')
+                        a.each-navbar-item(href='/page')= __('Beauty')
+                        a.each-navbar-item(href='/page')= __('Culture & Art')
+                        a.each-navbar-item(href='/paeg')= __('Living')
+                        a.each-navbar-item(href='/paeg')= __('Shopping')
+                        a.each-navbar-item(href='/paeg')= __('Videos')
         block content

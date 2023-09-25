@@ -1,0 +1,18 @@
+extends ../partials/header
+block content
+    .all-content-wrapper
+        .article-title-wrapper #{article.name}
+        .article-info-wrapper 
+            .article-byline By #{article.author}
+            .article-date #{article.date}
+        .article-subtext-wrapper #{article.description}
+        .article-content-wrapper
+            for content in article.content
+                if content.type == 'paragraph'
+                    .paragraph-wrapper #{content.content}
+                else if content.type == 'header'
+                    .header-wrapper #{content.content}
+                else if content.type == 'image'
+                    img.image-wrapper(src=content.content)
+            
+            
