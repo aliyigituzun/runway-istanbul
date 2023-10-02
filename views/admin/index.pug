@@ -3,7 +3,9 @@ block content
     .all-content-wrapper
         .dashboard-main-wrapper
             .article-list-wrapper
-                
+                for article in articles.articles
+                    .each-admin-article-wrapper
+                        a.each-admin-article-link(href='/article/' + article._id) #{article.name}
     .responsive-sidebar-wrapper#sidebar
         a.sidebar-title-text-wrapper(href='/')
             .title-text Title

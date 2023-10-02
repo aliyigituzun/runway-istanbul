@@ -46,11 +46,13 @@ articleSchema.statics.createArticle = async function (data, callback) {
 
 }
 
-articleSchema.statics.getArticles = async function (data, callback) {
+articleSchema.statics.getArticles = async function (callback) {
     
         const Article = this;
     
-        const articles = await Article.find().sort({date: 'desc'}).limit(data.limit);
+        const articles = await Article.find({});
+        console.log("burası artickes gacı")
+        console.log(articles);
         return callback({ error: null, articles: articles });
     
     }
