@@ -59,6 +59,39 @@ input::placeholder {font-family: Arial; color: #777777;}
     padding: 2px 2px;
     font-size: 16px;
 }
+.article-type-input {
+    box-sizing: border-box;
+    moz-box-sizing: border-box;
+    webkit-box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+    padding: 2px 2px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.each-article-type-option {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 40px;
+    margin-left: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.each-article-type-option-selected {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 40px;
+    margin-left: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #777777;
+}
 .article-content-wrapper {
     box-sizing: border-box;
     moz-box-sizing: border-box;

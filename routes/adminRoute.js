@@ -8,6 +8,7 @@ const adminArticleGetController = require('../controllers/admin/article/get');
 
 const adminAuthPostController = require('../controllers/admin/auth/post');
 const adminArticlePostController = require('../controllers/admin/article/post');
+const adminArticleDeletePostController = require('../controllers/admin/delete/post');
 
 router.get('/',
     //isAdmin,
@@ -27,9 +28,10 @@ router.post('/auth',
 router.post('/article',
     adminArticlePostController
 );
-
-
-
+router.post('/delete/:id',
+    //isAdmin,
+    adminArticleDeletePostController
+);
 
 module.exports = router;
 

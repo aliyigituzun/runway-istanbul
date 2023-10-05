@@ -10,13 +10,14 @@ block content
                 .main-featured-description-wrapper
                     .main-featured-description-text "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
         .news-wrapper
-            .each-article-wrapper 
-                .each-article-image-wrapper 
-                    img.each-article-image(src='/res/img1.jpeg' width='100%' height='100%')
-                .each-article-text-wrapper 
-                    .each-article-title-wrapper TİTEL
-                    .each-article-description-wrapper Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    .each-article-author-wrapper Author
+            for article in articles.articles
+                .each-article-wrapper 
+                    .each-article-image-wrapper 
+                        img.each-article-image(src='/res/img1.jpeg' width='100%' height='100%')
+                    .each-article-text-wrapper 
+                        .each-article-title-wrapper #{article.name}
+                        .each-article-description-wrapper #{article.description}
+                        .each-article-author-wrapper #{article.author}
             .each-article-wrapper 
                 .each-article-image-wrapper 
                 .each-article-text-wrapper 

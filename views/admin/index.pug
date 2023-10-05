@@ -2,10 +2,17 @@ extends ../partials/adminheader
 block content
     .all-content-wrapper
         .dashboard-main-wrapper
+            .featured-control-panel
+                .featured-control-panel-title Featured
+                .featured-control-panel-input 
+                    input.featured-control-panel-input(placeholder='Article ID')
             .article-list-wrapper
-                for article in articles.articles
+                for article in articles
                     .each-admin-article-wrapper
                         a.each-admin-article-link(href='/article/' + article._id) #{article.name}
+                        .each-admin-article-button-wrapper
+                            a.each-admin-article-button(href='/admin/edit/' + article._id) Edit
+                            .each-admin-article-button.delete(data-id = article._id) Delete
     .responsive-sidebar-wrapper#sidebar
         a.sidebar-title-text-wrapper(href='/')
             .title-text Title

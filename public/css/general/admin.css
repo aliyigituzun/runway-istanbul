@@ -144,11 +144,27 @@
     webkit-box-sizing: border-box;
     padding: 15px 15px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     width: 60%;
     height: 100px;
     box-shadow: 0 0 5px rgba(66, 66, 66, 0.3);
     margin-top: 30px;
 }  
+.each-admin-article-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 200px;
+    height: 30px;
+}
+.each-admin-article-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 200px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
 

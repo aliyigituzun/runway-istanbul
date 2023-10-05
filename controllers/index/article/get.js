@@ -1,7 +1,6 @@
 const Article = require('../../../models/article/Article');
 
 module.exports = async (req, res) => {
-    console.log("buradayix");
     await Article.findById(req.params.id)
     .then(article => {
         if(article)

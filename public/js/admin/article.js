@@ -51,6 +51,16 @@ window.addEventListener('load', () => {
             e.target.classList.add('each-article-content-type-selected')
             selectedContentType = e.target.id;
         }
+        if(e.target.classList.contains('each-article-type-option')) {
+            selectedContentButton = document.querySelector('.each-article-type-option-selected')
+            if (selectedContentButton) {
+                selectedContentButton.classList.remove('each-article-type-option-selected')
+                selectedContentButton.classList.add('each-article-type-option')
+            }
+            e.target.classList.remove('each-article-type-option')
+            e.target.classList.add('each-article-type-option-selected')
+            selectedContentType = e.target.id;
+        }
 
         if(e.target.id === 'add-button') {
             switch (selectedContentType) {
@@ -78,8 +88,17 @@ window.addEventListener('load', () => {
             const description = document.querySelector('.article-description-input').value;
             const author = document.querySelector('.article-author-input').value;
             const content = document.querySelectorAll('.each-content');
+            let type = "";
+            if (document.querySelector('.each-article-type-option-selected')){
+                type = document.querySelector('.each-article-type-option-selected').id;
+            } 
+            else {
+                errorWrapper.innerHTML = "You must select a type";
+                errorWrapper.style.display = 'block';
+                return;
+            }
 
-            if ((!title) || (!description) || (!author) || (title.length === 0) || (description.length === 0) || (author.length === 0)) {
+            if ((!title) || (!description) || (!author) || (!type) || (title.length === 0) || (description.length === 0) || (author.length === 0)) {
                 errorWrapper.innerHTML = "You must fill all the fields";
                 errorWrapper.style.display = 'block';
                 return;
@@ -115,7 +134,8 @@ window.addEventListener('load', () => {
                 name: title,
                 description,
                 author,
-                content: contentArray
+                content: contentArray,
+                type: type
             }
             console.log(data);
             serverRequest('/admin/article', 'POST', data, (res) => {

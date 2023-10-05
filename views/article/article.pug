@@ -4,7 +4,7 @@ block content
         .article-title-wrapper #{article.name}
         .article-info-wrapper 
             .article-byline By #{article.author}
-            .article-date #{article.date}
+            .article-date #{article.date.toLocaleDateString(lang)}
         .article-subtext-wrapper #{article.description}
         .article-content-wrapper
             for content in article.content
