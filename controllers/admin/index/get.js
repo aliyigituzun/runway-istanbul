@@ -7,7 +7,7 @@ module.exports =  (req, res) => {
             page: 'admin/index',
             includes: {
                 external: {
-                    css: ['page', 'index', 'header', 'admin', 'general'],
+                    css: ['page', 'index', 'header', 'admin', 'general'],               
                     js: ['page', 'index', 'header', 'admin', 'serverRequest']
                 }
             },

@@ -2,52 +2,25 @@ extends ../partials/header
 block content
     .all-content-wrapper
         .featured-wrapper
-            .main-featured-image-wrapper
-                img.main-featured-image(src='/res/img1.jpeg' width='100%' height='100%')
-            .main-featured-text-wrapper
-                .main-featured-title-wrapper
-                    .main-featured-title-text Örnek Başlık
-                .main-featured-description-wrapper
-                    .main-featured-description-text "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+            for article in articles.articles
+                if article.is_featured
+                    .main-featured-image-wrapper
+                        img.main-featured-image(src=article.thumbnail width='100%' height='100%')
+                    .main-featured-text-wrapper
+                        .main-featured-title-wrapper
+                            .main-featured-title-text #{article.name}
+                        .main-featured-description-wrapper
+                            .main-featured-description-text #{article.description}
         .news-wrapper
             for article in articles.articles
-                .each-article-wrapper 
-                    .each-article-image-wrapper 
-                        img.each-article-image(src='/res/img1.jpeg' width='100%' height='100%')
-                    .each-article-text-wrapper 
-                        .each-article-title-wrapper #{article.name}
-                        .each-article-description-wrapper #{article.description}
-                        .each-article-author-wrapper #{article.author}
-            .each-article-wrapper 
-                .each-article-image-wrapper 
-                .each-article-text-wrapper 
-                    .each-article-title-wrapper 
-                    .each-article-description-wrapper
-                    .each-article-author-wrapper
-            .each-article-wrapper 
-                .each-article-image-wrapper 
-                .each-article-text-wrapper 
-                    .each-article-title-wrapper 
-                    .each-article-description-wrapper
-                    .each-article-author-wrapper
-            .each-article-wrapper 
-                .each-article-image-wrapper 
-                .each-article-text-wrapper 
-                    .each-article-title-wrapper 
-                    .each-article-description-wrapper
-                    .each-article-author-wrapper
-            .each-article-wrapper 
-                .each-article-image-wrapper 
-                .each-article-text-wrapper 
-                    .each-article-title-wrapper 
-                    .each-article-description-wrapper
-                    .each-article-author-wrapper
-            .each-article-wrapper 
-                .each-article-image-wrapper 
-                .each-article-text-wrapper 
-                    .each-article-title-wrapper Örnek başlık
-                    .each-article-description-wrapper
-                    .each-article-author-wrapper
+                if !article.is_featured
+                    a.each-article-wrapper(href='/article/' + article._id)
+                        .each-article-image-wrapper 
+                            img.each-article-image(src=article.thumbnail width='100%' height='100%')
+                        .each-article-text-wrapper 
+                            .each-article-title-wrapper #{article.name}
+                            .each-article-description-wrapper #{article.description}
+                            .each-article-author-wrapper #{article.author}
         .footer-wrapper
             .footer-title-wrapper Runway Istanbul 
             .footer-text-wrapper

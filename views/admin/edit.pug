@@ -1,0 +1,79 @@
+extends ../partials/adminheader
+block content
+    .all-content-wrapper
+        .dashboard-main-wrapper
+            .dashboard-article-wrapper
+                .article-input-wrapper
+                    input.article-title-input(placeholder='Title' value=article.name)
+                .article-input-wrapper#description-wrapper
+                    textarea.article-description-input(placeholder='Description') #{article.description}
+                .article-input-wrapper#thumbnail-wrapper
+                    input.article-thumbnail-input(placeholder='Thumbnail' value=article.thumbnail)
+                .article-input-wrapper
+                    input.article-author-input(placeholder='Author' value=article.author)
+                input.article-date-wrapper(style="display: none;" value=article.date)
+                input.article-id-wrapper(style="display: none;" value=article._id)
+                .article-type-input
+                    if article.type === 'fashion'
+                        .each-article-type-option-selected#fashion Fashion
+                    else 
+                        .each-article-type-option#fashion Fashion
+                    if article.type === 'runway'
+                        .each-article-type-option-selected#runway Runway
+                    else
+                        .each-article-type-option#runway Runway
+                    if article.type === 'beauty'
+                        .each-article-type-option-selected#beauty Beauty
+                    else 
+                        .each-article-type-option#beauty Beauty
+                    if article.type === 'culture'
+                        .each-article-type-option-selected#culture Culture & Art
+                    else
+                        .each-article-type-option#culture Culture & Art
+                    if article.type === 'living'
+                        .each-article-type-option-selected#living Living
+                    else
+                        .each-article-type-option#living Living
+                    if article.type === 'shopping'
+                        .each-article-type-option-selected#shopping Shopping
+                    else
+                        .each-article-type-option#shopping Shopping
+                .article-content-wrapper
+                    each content in article.content
+                        if content.type === 'paragraph'
+                            textarea.each-create-article-paragraph.each-content(placeholder='Paragraph' ) #{content.content}
+                            .each-content-delete-button#delete-button Delete
+                        else if content.type === 'header'
+                            textarea.each-create-article-header.each-content(placeholder='Header') #{content.content}
+                            .each-content-delete-button#delete-button Delete
+                        else if content.type === 'image'
+                            .each-content.each-create-article-image-wrapper
+                                input.each-create-article-image-input(placeholder='Image' value=content.content)
+                                img.each-create-article-image(src=content.content)
+                            .each-content-delete-button#delete-button Delete
+                        else if content.type === 'video'
+                            .each-content.each-create-article-video-wrapper
+                                input.each-create-article-video-input(placeholder='Video' value=content.content)
+                                iframe.each-create-article-video(src=content.content)
+                            .each-content-delete-button#delete-button Delete
+                        else if content.type === 'link'
+                            .each-content#link
+                                input.article-content-input(placeholder='Link' value=content.content)
+                            .each-content-delete-button#delete-button Delete
+                        else if content.type === 'quote'
+                            .each-content.each-create-article-quote-wrapper#quote
+                                textarea.each-create-article-quote-text(placeholder='Quote') #{content.content}
+                                textarea.each-create-article-quote-author(placeholder='Author') #{content.author}
+                            .each-content-delete-button#delete-button Delete
+                .article-content-add
+                    .article-content-add-options
+                        .each-article-content-type-selected#paragraph Paragraph
+                        .each-article-content-type#header Header
+                        .each-article-content-type#image Image
+                        .each-article-content-type#video Video
+                        .each-article-content-type#link Link
+                        .each-article-content-type#quote Quote
+                    .article-content-add-button#add-button Add Content
+                .article-content-submit
+                    .article-content-submit-button#submit-button Submit
+                .error-wrapper(style="display: none;")

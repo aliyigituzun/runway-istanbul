@@ -132,6 +132,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: calc(100vw - 260px);
     height: 100%;
     position: fixed;

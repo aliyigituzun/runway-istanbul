@@ -3,11 +3,12 @@ block content
     .all-content-wrapper
         .dashboard-main-wrapper
             .featured-control-panel
-                .featured-control-panel-title Featured
-                .featured-control-panel-input 
-                    input.featured-control-panel-input(placeholder='Article ID')
+                select.featured-control-panel-input 
+                    for article in articles.articles
+                        option(value=article._id) #{article.name}
+                button.set-featured-button Set Featured
             .article-list-wrapper
-                for article in articles
+                for article in articles.articles
                     .each-admin-article-wrapper
                         a.each-admin-article-link(href='/article/' + article._id) #{article.name}
                         .each-admin-article-button-wrapper

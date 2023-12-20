@@ -1,19 +1,26 @@
+
 .article-title-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 60px;
 }
 .article-info-wrapper {
+    box-sizing: border-box;
+    moz-box-sizing: border-box;
+    webkit-box-sizing: border-box;
     display: flex;
     justify-content: start;
     align-items: center;
     width: 100%;
     height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    padding-left: 20%;
+    border-top: 1px solid rgb(91, 86, 86);
+    border-bottom: 1px solid rgb(91, 86, 86);
 }
 .article-byline {
     display: flex;
@@ -41,20 +48,25 @@
     color: rgb(91, 86, 86)
 }
 .article-subtext-wrapper  {
+    box-sizing: border-box;
+    moz-box-sizing: border-box;
+    webkit-box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    padding-left: 20%
+}
+.header-wrapper {
     display: flex;
     justify-content: start;
     align-items: center;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 20px;
-    margin-left: 30px;
-}
-.header-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    width: 60%;
     margin-bottom: 20px;
     margin-left: 30px;
 }
@@ -64,8 +76,8 @@
     align-items: start;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    margin-bottom: 20px;
-    margin-left: 30px;
+    width: 60%;
+    margin-bottom: 30px;
 }
 .image-wrapper {
     display: flex;
@@ -74,5 +86,25 @@
     height: 400px;
     margin-bottom: 20px;
     margin-left: 30px;
-
+}
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 450px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.quote-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    font-size: 24px;
+    width: 500px;
+    height: 70px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }

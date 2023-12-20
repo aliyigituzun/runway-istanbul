@@ -19,6 +19,7 @@ function serverRequest (url, method, data, callback) {
       if (xhr.readyState == 4 && xhr.status != 200)
         return callback({ success: false, error: 'network_error' })
       else if (xhr.readyState == 4 && xhr.responseText)
+        console.log(xhr.responseText);
         return callback(JSON.parse(xhr.responseText));
     };
   }

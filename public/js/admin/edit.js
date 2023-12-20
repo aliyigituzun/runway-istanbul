@@ -98,7 +98,6 @@ window.addEventListener('load', () => {
             const deleteButton = document.createElement('button');
             deleteButton.classList.add('each-content-delete-button');
             deleteButton.id = 'delete-button';
-            deleteButton.innerHTML = 'Delete';
 
             switch (selectedContentType) {
                 case 'paragraph':
@@ -134,13 +133,15 @@ window.addEventListener('load', () => {
             content.remove();
             button.remove();
         }
-
+        
         if(e.target.id === 'submit-button') {
             const title = document.querySelector('.article-title-input').value;
             const description = document.querySelector('.article-description-input').value;
             const author = document.querySelector('.article-author-input').value;
             const content = document.querySelectorAll('.each-content');
             const thumbnail = document.querySelector('.article-thumbnail-input').value;
+            const id = document.querySelector('.article-id-wrapper').value;
+            const date = document.querySelector('.article-date-wrapper').value;
             let type = "";
             if (document.querySelector('.each-article-type-option-selected')){
                 type = document.querySelector('.each-article-type-option-selected').id;
@@ -202,10 +203,12 @@ window.addEventListener('load', () => {
                 author,
                 thumbnail,
                 content: contentArray,
-                type: type
+                type: type,
+                date: date,
+                _id: id
             }
             console.log(data);
-            serverRequest('/admin/article', 'POST', data, (res) => {
+            serverRequest('/admin/edit', 'POST', data, (res) => {
                 if(res.success) {
                     window.location.href = '/admin/article';
                 } else {
