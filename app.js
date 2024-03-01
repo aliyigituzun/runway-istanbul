@@ -10,6 +10,9 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 
+const MongoStore = require('connect-mongo');
+
+
 const numCPUs = process.env.WEB_CONCURRENCY || require('os').cpus().length;
 
 if (cluster.isMaster) {
@@ -67,6 +70,10 @@ if (cluster.isMaster) {
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    cookie: { maxAge: 604800000 }, // 7 days
+    store: MongoStore.create({
+        mongoUrl: MONGODB_URI
+    })
   });
 
   app.use(cookieParser());  
